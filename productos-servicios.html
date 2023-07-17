@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos Servicios</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/landing-page.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div
+        itemscope=""
+        itemtype="https://schema.org/Organization"
+        bis_skin_checked="1"
+      >
+        <a class="navbar-brand" href="index.html"
+          ><img
+            itemprop="logo"
+            src="img/logo-2.jpg"
+            alt="Portal inmobiliario de Perú"
+            border="0"
+          />
+          <meta itemprop="url" content="https://www.bienesonline.pe/" />
+        </a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample03"
+        aria-controls="navbarsExample03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarsExample03"
+        bis_skin_checked="1"
+      >
+        <ul class="navbar-nav ml-auto mr-2">
+          <li class="nav-item">
+            <a class="nav-link" href="productos-servicios.html"
+              >Productos/Servicios</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="empresas-profesionales.html"
+              >Empresas/Profesionales</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inmobiliarias.php">Inmobiliarias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publicar.html">Ingresar/Registrarme</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <header class="masthead text-white text-center">
+      <div class="overlay" bis_skin_checked="1"></div>
+      <div class="container" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+          <div class="col-xl-6 mx-auto" bis_skin_checked="1">
+            <h1 class="mb-4">Productos y Servicios</h1>
+            <form action="redir-busqueda-producto.php" method="post">
+              <select
+                name="categoriaproducto"
+                class="form-control form-control-lg"
+              >
+                <option value="" selected="">Seleccionar categoría</option>
+                <optgroup label="BAÑOS">
+                  <option value="productos-servicios/apliques-y-accesorios">
+                    Apliques y Accesorios
+                  </option>
+
+                  <option value="productos-servicios/bachas-de-bano">
+                    Bachas de baño
+                  </option>
+
+                  <option value="productos-servicios/baneras">Bañeras</option>
+
+                  <option value="productos-servicios/duchas">Duchas</option>
+
+                  <option value="productos-servicios/griferia">Grifería</option>
+
+                  <option value="productos-servicios/muebles-de-bano">
+                    Muebles de baño
+                  </option>
+
+                  <option value="productos-servicios/revestimientos">
+                    Revestimientos
+                  </option>
+
+                  <option value="productos-servicios/ropa-de-bano">
+                    Ropa de Baño
+                  </option>
+
+                  <option value="productos-servicios/sanitarios">
+                    Sanitarios
+                  </option>
+                </optgroup>
+                <optgroup label="COCINA Y COMEDOR">
+                  <option value="productos-servicios/bachas-de-cocina">
+                    Bachas de cocina
+                  </option>
+
+                  <option value="productos-servicios/electrodomesticos">
+                    Electrodomésticos
+                  </option>
+
+                  <option value="productos-servicios/griferia-y-accesorios">
+                    Grifería y accesorios
+                  </option>
+
+                  <option value="productos-servicios/instrumentos-de-cocina">
+                    Instrumentos de Cocina
+                  </option>
+
+                  <option value="productos-servicios/mesadas">Mesadas</option>
+
+                  <option value="productos-servicios/mesas-de-comedor">
+                    Mesas de Comedor
+                  </option>
+
+                  <option value="productos-servicios/muebles-de-cocina">
+                    Muebles de cocina
+                  </option>
+
+                  <option value="productos-servicios/revestimientos-de-cocina">
+                    Revestimientos de cocina
+                  </option>
+
+                  <option value="productos-servicios/sillas">Sillas</option>
+
+                  <option value="productos-servicios/vajilla">Vajilla</option>
+                </optgroup>
+                <optgroup label="DECORACIÓN">
+                  <option value="productos-servicios/accesorios">
+                    Accesorios
+                  </option>
+
+                  <option value="productos-servicios/alfombras">
+                    Alfombras
+                  </option>
+
+                  <option value="productos-servicios/ceramica">Cerámica</option>
+
+                  <option value="productos-servicios/cortinas">Cortinas</option>
+
+                  <option value="productos-servicios/decoracion-de-paredes">
+                    Decoración de Paredes
+                  </option>
+
+                  <option value="productos-servicios/espejos">Espejos</option>
+
+                  <option value="productos-servicios/obras-de-arte">
+                    Obras de Arte
+                  </option>
+
+                  <option value="productos-servicios/textiles">Textiles</option>
+                </optgroup>
+                <optgroup label="DORMITORIOS">
+                  <option value="productos-servicios/camas">Camas</option>
+
+                  <option value="productos-servicios/colchones">
+                    Colchones
+                  </option>
+
+                  <option value="productos-servicios/decoracion">
+                    Decoración
+                  </option>
+
+                  <option value="productos-servicios/lamparas-e-iluminacion">
+                    Lámparas e iluminación
+                  </option>
+
+                  <option value="productos-servicios/mesas-de-luz">
+                    Mesas de Luz
+                  </option>
+
+                  <option value="productos-servicios/muebles-para-ninos">
+                    Muebles para niños
+                  </option>
+
+                  <option value="productos-servicios/placares-y-mobiliario">
+                    Placares y mobiliario
+                  </option>
+
+                  <option value="productos-servicios/ropa-de-cama">
+                    Ropa de cama
+                  </option>
+                </optgroup>
+                <optgroup label="ILUMINACIÓN">
+                  <option value="productos-servicios/apliques-de-pared">
+                    Apliques de pared
+                  </option>
+
+                  <option value="productos-servicios/iluminacion-exterior">
+                    Iluminación Exterior
+                  </option>
+
+                  <option value="productos-servicios/lamparas-de-mesa">
+                    Lámparas de mesa
+                  </option>
+
+                  <option value="productos-servicios/lamparas-de-pie">
+                    Lámparas de Pie
+                  </option>
+
+                  <option value="productos-servicios/lamparas-de-techo">
+                    Lámparas de Techo
+                  </option>
+
+                  <option
+                    value="productos-servicios/modulos-enchufes-y-accesorios"
+                  >
+                    Modulos, enchufes y accesorios
+                  </option>
+                </optgroup>
+                <optgroup label="LIVING Y ESTAR">
+                  <option value="productos-servicios/alfombras-para-living">
+                    Alfombras para living
+                  </option>
+
+                  <option value="productos-servicios/cuadros">Cuadros</option>
+
+                  <option value="productos-servicios/decoracion-living">
+                    Decoración living
+                  </option>
+
+                  <option value="productos-servicios/estantes-y-bibliotecas">
+                    Estantes y Bibliotecas
+                  </option>
+
+                  <option value="productos-servicios/iluminacion-y-lamparas">
+                    Iluminación y lámparas
+                  </option>
+
+                  <option value="productos-servicios/mantas-y-cobijas">
+                    Mantas y Cobijas
+                  </option>
+
+                  <option value="productos-servicios/mesas-y-sillas">
+                    Mesas y sillas
+                  </option>
+
+                  <option value="productos-servicios/muebles-living">
+                    Muebles living
+                  </option>
+
+                  <option value="productos-servicios/sofas-y-sillones">
+                    Sofás y sillones
+                  </option>
+                </optgroup>
+                <optgroup label="MÁS PRODUCTOS O SERVICIOS">
+                  <option value="productos-servicios/almacenaje-y-organizacion">
+                    Almacenaje y organización
+                  </option>
+
+                  <option value="productos-servicios/alquiler-de-herramientas">
+                    Alquiler de herramientas
+                  </option>
+
+                  <option
+                    value="productos-servicios/alquiler-de-maquinaria-y-autos"
+                  >
+                    Alquiler de maquinaria y autos
+                  </option>
+
+                  <option
+                    value="productos-servicios/articulos-para-ninos-y-bebes"
+                  >
+                    Artículos para niños y bebés
+                  </option>
+
+                  <option
+                    value="productos-servicios/electronica-y-electrodomesticos"
+                  >
+                    Electrónica y electrodomésticos
+                  </option>
+
+                  <option
+                    value="productos-servicios/plagas-y-cuidados-del-hogar"
+                  >
+                    Plagas y cuidados del Hogar
+                  </option>
+
+                  <option value="productos-servicios/velas">Velas</option>
+                </optgroup>
+                <optgroup label="MATERIALES DE CONSTRUCCIÓN">
+                  <option value="productos-servicios/aislacion">
+                    Aislación
+                  </option>
+
+                  <option value="productos-servicios/aridos-y-rellenos">
+                    Aridos y rellenos
+                  </option>
+
+                  <option value="productos-servicios/cementos-y-revoques">
+                    Cementos y revoques
+                  </option>
+
+                  <option value="productos-servicios/climatizacion">
+                    Climatización
+                  </option>
+
+                  <option value="productos-servicios/maderas-y-derivados">
+                    Maderas y Derivados
+                  </option>
+
+                  <option value="productos-servicios/mamposteria-y-ladrillos">
+                    Mampostería y ladrillos
+                  </option>
+
+                  <option value="productos-servicios/materiales-electricos">
+                    Materiales eléctricos
+                  </option>
+
+                  <option value="productos-servicios/materiales-en-seco">
+                    Materiales en Seco
+                  </option>
+
+                  <option value="productos-servicios/materiales-para-agua">
+                    Materiales para agua
+                  </option>
+
+                  <option
+                    value="productos-servicios/materiales-para-cubiertas-y-techos"
+                  >
+                    Materiales para cubiertas y techos
+                  </option>
+
+                  <option value="productos-servicios/materiales-para-gas">
+                    Materiales para Gas
+                  </option>
+
+                  <option value="productos-servicios/pinturas">Pinturas</option>
+
+                  <option value="productos-servicios/pisos-y-revestimientos">
+                    Pisos y revestimientos
+                  </option>
+
+                  <option value="productos-servicios/ventanas-y-puertas">
+                    Ventanas y Puertas
+                  </option>
+                </optgroup>
+                <optgroup label="MUEBLES">
+                  <option value="productos-servicios/muebles-de-exterior">
+                    Muebles de Exterior
+                  </option>
+
+                  <option value="productos-servicios/muebles-de-interior">
+                    Muebles de interior
+                  </option>
+                </optgroup>
+                <optgroup label="PARQUE O EXTERIOR ">
+                  <option value="productos-servicios/asientos">Asientos</option>
+
+                  <option value="productos-servicios/decoracion-exterior">
+                    Decoración exterior
+                  </option>
+
+                  <option value="productos-servicios/flores-y-plantas">
+                    Flores y Plantas
+                  </option>
+
+                  <option value="productos-servicios/iluminacion-de-exteriores">
+                    Iluminación de exteriores
+                  </option>
+
+                  <option value="productos-servicios/macetas">Macetas</option>
+
+                  <option value="productos-servicios/piscinas-y-spas">
+                    Piscinas y spas
+                  </option>
+
+                  <option value="productos-servicios/pisos">Pisos</option>
+
+                  <option value="productos-servicios/techos-y-pergolas">
+                    techos y Pergolas
+                  </option>
+                </optgroup>
+              </select>
+              <a href="publicar.php" class="btn btn-primary pl-5 pr-5 mt-4">
+                Agregar producto/servicio
+              </a>
+              <button
+                type="button"
+                class="btn btn-danger pl-5 pr-5 mt-4"
+                onclick="Validarbuscadorproducto(this.form)"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="dos-columnas">
+      <div class="container" bis_skin_checked="1">
+        <div class="row mt-4" bis_skin_checked="1">
+          <div class="col-lg-12" bis_skin_checked="1">
+            <h4>COCINA Y COMEDOR</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/bachas-de-cocina"
+                    >Bachas de cocina</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/electrodomesticos"
+                    >Electrodomésticos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/griferia-y-accesorios"
+                    >Grifería y accesorios</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/instrumentos-de-cocina"
+                    >Instrumentos de Cocina</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mesadas">Mesadas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mesas-de-comedor"
+                    >Mesas de Comedor</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-de-cocina"
+                    >Muebles de cocina</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/revestimientos-de-cocina"
+                    >Revestimientos de cocina</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/sillas">Sillas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/vajilla">Vajilla</a>
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>BAÑOS</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/apliques-y-accesorios"
+                    >Apliques y Accesorios</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/bachas-de-bano"
+                    >Bachas de baño</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/baneras">Bañeras</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/duchas">Duchas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/griferia">Grifería</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-de-bano"
+                    >Muebles de baño</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/revestimientos"
+                    >Revestimientos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/ropa-de-bano">Ropa de Baño</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/sanitarios">Sanitarios</a>
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>DORMITORIOS</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/camas">Camas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/colchones">Colchones</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/decoracion">Decoración</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/lamparas-e-iluminacion"
+                    >Lámparas e iluminación</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mesas-de-luz">Mesas de Luz</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-para-ninos"
+                    >Muebles para niños</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/placares-y-mobiliario"
+                    >Placares y mobiliario</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/ropa-de-cama">Ropa de cama</a>
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>LIVING Y ESTAR</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/alfombras-para-living"
+                    >Alfombras para living</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/cuadros">Cuadros</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/decoracion-living"
+                    >Decoración living</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/estantes-y-bibliotecas"
+                    >Estantes y Bibliotecas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/iluminacion-y-lamparas"
+                    >Iluminación y lámparas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mantas-y-cobijas"
+                    >Mantas y Cobijas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mesas-y-sillas"
+                    >Mesas y sillas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-living"
+                    >Muebles living</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/sofas-y-sillones"
+                    >Sofás y sillones</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>PARQUE O EXTERIOR</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/asientos">Asientos</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/decoracion-exterior"
+                    >Decoración exterior</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/flores-y-plantas"
+                    >Flores y Plantas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/iluminacion-de-exteriores"
+                    >Iluminación de exteriores</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/macetas">Macetas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/piscinas-y-spas"
+                    >Piscinas y spas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/pisos">Pisos</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/techos-y-pergolas"
+                    >techos y Pergolas</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>MUEBLES</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-de-exterior"
+                    >Muebles de Exterior</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/muebles-de-interior"
+                    >Muebles de interior</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>DECORACIÓN</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/accesorios">Accesorios</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/alfombras">Alfombras</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/ceramica">Cerámica</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/cortinas">Cortinas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/decoracion-de-paredes"
+                    >Decoración de Paredes</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/espejos">Espejos</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/obras-de-arte">Obras de Arte</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/textiles">Textiles</a>
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>ILUMINACIÓN</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/apliques-de-pared"
+                    >Apliques de pared</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/iluminacion-exterior"
+                    >Iluminación Exterior</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/lamparas-de-mesa"
+                    >Lámparas de mesa</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/lamparas-de-pie"
+                    >Lámparas de Pie</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/lamparas-de-techo"
+                    >Lámparas de Techo</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/modulos-enchufes-y-accesorios"
+                    >Modulos, enchufes y accesorios</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>MATERIALES DE CONSTRUCCIÓN</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/aislacion">Aislación</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/aridos-y-rellenos"
+                    >Aridos y rellenos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/cementos-y-revoques"
+                    >Cementos y revoques</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/climatizacion">Climatización</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/maderas-y-derivados"
+                    >Maderas y Derivados</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/mamposteria-y-ladrillos"
+                    >Mampostería y ladrillos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/materiales-electricos"
+                    >Materiales eléctricos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/materiales-en-seco"
+                    >Materiales en Seco</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/materiales-para-agua"
+                    >Materiales para agua</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a
+                    href="productos-servicios/materiales-para-cubiertas-y-techos"
+                    >Materiales para cubiertas y techos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/materiales-para-gas"
+                    >Materiales para Gas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/pinturas">Pinturas</a>
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/pisos-y-revestimientos"
+                    >Pisos y revestimientos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/ventanas-y-puertas"
+                    >Ventanas y Puertas</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+
+            <h4>MÁS PRODUCTOS O SERVICIOS</h4>
+
+            <div class="row m-1 lista-subcategorias" bis_skin_checked="1">
+              <ul class="list-inline">
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/almacenaje-y-organizacion"
+                    >Almacenaje y organización</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/alquiler-de-herramientas"
+                    >Alquiler de herramientas</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/alquiler-de-maquinaria-y-autos"
+                    >Alquiler de maquinaria y autos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/articulos-para-ninos-y-bebes"
+                    >Artículos para niños y bebés</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/electronica-y-electrodomesticos"
+                    >Electrónica y electrodomésticos</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/plagas-y-cuidados-del-hogar"
+                    >Plagas y cuidados del Hogar</a
+                  >
+                </li>
+
+                <li class="list-item link-filtro">
+                  <a href="productos-servicios/velas">Velas</a>
+                </li>
+              </ul>
+            </div>
+            <!--/.-->
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

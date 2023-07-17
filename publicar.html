@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingresar a Bienes peru</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/panel.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/style-panel.css" />
+    <link rel="stylesheet" href="css/swipebox.css" />
+    <link rel="stylesheet" href="css/jquery.fs.selecter.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" />
+    <link rel="stylesheet" href="css/header-estilos-html5-3.css" />
+    <link rel="stylesheet" href="css/foundation-bienesonline.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      .panel-log {
+        font-family: "Open Sans", sans-serif;
+      }
+      .panel {
+        margin: 0 -10px;
+        padding-bottom: 50px;
+      }
+      .panel,
+      .panel * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .panel header h1 {
+        padding: 0 10px;
+      }
+      .panel-left {
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+      }
+      .panel-right {
+        width: 50%;
+        float: right;
+        padding: 0 10px;
+      }
+
+      .panel-block {
+        background: #f7f7f7;
+        border: 1px dotted #ccc;
+        padding: 17px 20px 20px;
+      }
+      .panel-block + .panel-block {
+        margin-top: 20px;
+      }
+
+      .panel-block h3 {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 0 12px;
+      }
+      .panel-block h4 {
+        font-size: 13px;
+        color: #666;
+        margin: -7px 0 12px;
+      }
+
+      .form-group {
+        height: 34px;
+        margin: 0 0 15px;
+      }
+      /*.user-type{height:88px;}*/
+      /*.form-group+.form-group{margin-top:15px;}*/
+      .panel-block label {
+        display: inline-block;
+        text-align: right;
+        width: 40%;
+        padding: 0 10px 0 0;
+        float: left;
+        margin: 0;
+        line-height: 34px;
+      }
+      .panel-block .form-control {
+        display: inline-block;
+        width: 60%;
+        float: left;
+        margin: 0;
+        height: 34px;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+      }
+      .panel-block .form-control:focus {
+        border-color: #000;
+        outline: none;
+      }
+
+      .panel-block .wrap {
+        float: left;
+        width: 60%;
+        height: 34px;
+      }
+      h4.discTxt {
+        font-style: italic;
+        color: #666;
+        font-size: 12px !important;
+        padding-left: 40%;
+        margin-bottom: 17px !important;
+      }
+      h4.impTxt {
+        font-weight: bold;
+        color: #666;
+        padding: 7px 5px;
+        border: 1px solid #ccc;
+        background: #fff;
+        text-align: center;
+        margin-bottom: 20px !important;
+        font-size: 12px !important;
+        text-transform: uppercase;
+      }
+      .user-type span.Txt {
+        display: inline-block;
+      }
+
+      .panel-block .selecter .selecter-selected {
+        height: 34px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+      .panel-block .selecter.open .selecter-selected,
+      .panel-block .selecter.focus .selecter-selected {
+        border-color: #000;
+      }
+
+      .infoTxt {
+        font-style: italic;
+        color: #666;
+        font-size: 12px;
+        padding-left: 40%;
+        display: block;
+        margin: -9px 0 12px;
+      }
+
+      .panel-block .actions {
+        padding-left: 40%;
+        padding-top: 0;
+      }
+      .panel-block .actions h4 {
+        margin-top: 0;
+      }
+      .panel-block .actions h4 a {
+        color: #fd0b05;
+      }
+      .panel-block .actions h4 a:hover {
+        text-decoration: underline;
+      }
+      .panel-block .actions a:after {
+        display: none;
+      }
+      .panel-block .btn {
+        width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        .panel-left {
+          margin-bottom: 20px;
+        }
+        .panel-left,
+        .panel-right {
+          width: 100%;
+        }
+
+        .form-group {
+          height: auto;
+          clear: both;
+          overflow: hidden;
+        }
+        .panel-block label {
+          width: 100%;
+          text-align: left;
+        }
+        .panel-block .form-control {
+          width: 100%;
+        }
+        .panel-block .wrap {
+          width: 100%;
+        }
+
+        h4.discTxt,
+        .infoTxt,
+        .panel-block .actions {
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" role="banner">
+      <div class="head-sub" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+          <div class="wrapper" bis_skin_checked="1">
+            <div class="menuMin" bis_skin_checked="1">
+              <h4>menu<span></span><span></span><span></span></h4>
+            </div>
+            <div class="three columns" bis_skin_checked="1">
+              <a href="index.html" class="site-name">
+                <img
+                  src="img/logo-2.jpg"
+                  alt="Portal inmobiliario de Perú"
+                  border="0"
+                />
+              </a>
+            </div>
+          </div>
+          <!--/.wrapper-->
+        </div>
+        <!--/.row-->
+      </div>
+      <!--/.head-sub-->
+      <script>
+        $(document).ready(function () {
+          $(".menuMin").click(function () {
+            $("body").toggleClass("menuExp");
+          });
+        });
+      </script>
+    </header>
+    <div
+      class="row contenido"
+      id="mainDetalle"
+      style="max-width: 90%"
+      bis_skin_checked="1"
+    >
+      <div class="detalle panel" bis_skin_checked="1">
+        <article class="detalle panel">
+          <header style="padding-left: 20px">
+            <h1>Ingresar al panel de administración de Bienes Online</h1>
+          </header>
+
+          <div class="panel-left" bis_skin_checked="1">
+            <section class="panel-block">
+              <h3>Si usted está registrado:</h3>
+              <form
+                name="form1"
+                method="post"
+                action="modulos/check_login.php?country=Perú"
+              >
+                <div class="form-group" bis_skin_checked="1">
+                  <label>E-mail:</label>
+                  <input
+                    type="email"
+                    name="mail"
+                    id="mail"
+                    size="25"
+                    maxlength="100"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Contraseña:</label>
+                  <input
+                    name="password"
+                    type="password"
+                    id="password"
+                    size="10"
+                    maxlength="10"
+                    class="form-control"
+                  />
+                </div>
+                <div class="actions" bis_skin_checked="1">
+                  <input
+                    name="redireccionar"
+                    type="hidden"
+                    id="redireccionar"
+                    value="panel.php"
+                  />
+                  <input
+                    name="paginalogin"
+                    type="hidden"
+                    id="paginalogin"
+                    value="publicar.php"
+                  />
+                  <button
+                    type="button"
+                    onclick="ValidarLogin(this.form)"
+                    class="btn btn-red"
+                  >
+                    Ingresar
+                  </button>
+                </div>
+              </form>
+            </section>
+            <!--/.panel-block-->
+
+            <section class="panel-block">
+              <h3>Si olvidó su contraseña:</h3>
+              <h4>Se le enviará por e-mail una nueva contraseña.</h4>
+              <form
+                name="form4"
+                method="post"
+                action="modulos/forgot_password_get.php"
+              >
+                <div class="form-group" bis_skin_checked="1">
+                  <label>E-mail:</label>
+                  <input
+                    name="email"
+                    type="text"
+                    id="email"
+                    size="25"
+                    maxlength="100"
+                    class="form-control"
+                  />
+                </div>
+                <div class="actions" bis_skin_checked="1">
+                  <button type="submit" class="btn btn-red">Enviar</button>
+                </div>
+              </form>
+            </section>
+            <!--/.panel-block-->
+          </div>
+          <!--/.panel-left-->
+
+          <div class="panel-right" bis_skin_checked="1">
+            <section class="panel-block">
+              <h3>Si usted <span>NO</span> está registrado:</h3>
+              <h4>
+                <div id="buscarmail" bis_skin_checked="1">
+                  Como primer dato inserte su dirección de e-mail.
+                </div>
+              </h4>
+              <form
+                name="formregis"
+                method="post"
+                action="modulos/class_users.php?acc=1"
+              >
+                <div class="form-group" bis_skin_checked="1">
+                  <label>E-mail:</label>
+                  <input
+                    name="mail"
+                    type="email"
+                    id="mail"
+                    size="25"
+                    onchange="javascript:cargarCombox('archivos/buscar_mail.php', 'mail', 'buscarmail', '')"
+                    maxlength="100"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Repetir E-mail:</label>
+                  <input
+                    name="repetir_mail"
+                    type="email"
+                    id="repetir_mail"
+                    size="25"
+                    maxlength="100"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group user-type" bis_skin_checked="1">
+                  <label>Tipo de Usuario<span class="Txt">*</span>:</label>
+
+                  <select
+                    name="tipo_usuario"
+                    id="tipo_usuario"
+                    class="form-control"
+                  >
+                    <option value="Inmobiliaria">Inmobiliaria</option>
+                    <option value="Profesional/Empresa">
+                      Profesional/Empresa
+                    </option>
+                    <option value="Particular">Particular</option>
+                  </select>
+                </div>
+                <h4 class="discTxt">
+                  * Elija lo que corresponda, todas las opciones son
+                  gratuitas.<br />
+                  <strong>Inmobiliaria:</strong> para publicar anuncios
+                  inmobiliarios.<br />
+                  <strong>Profesional/empresa:</strong> profesionales y empresas
+                  relacionadas. Dar de alta en directorio y publicar productos y
+                  servicios.<br />
+                  <strong>Particular:</strong> Realizar búsquedas y consultas,
+                  puede publicar inmuebles.
+                </h4>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Nombre de la empresa:</label>
+                  <input
+                    name="inmobiliaria"
+                    type="text"
+                    id="inmobiliaria"
+                    size="30"
+                    maxlength="100"
+                    class="form-control"
+                  />
+                </div>
+                <span class="infoTxt"
+                  >* sólo inmobiliarias, empresas y profesionales.</span
+                >
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Provincia:</label>
+
+                  <select
+                    name="provincia_inmueble"
+                    class="form-control"
+                    onchange="javascript:cargarCombo('archivos/carga_localidad_registro.php', 'provincia_inmueble', 'Div_Subactividades', '')"
+                    id="provincia_inmueble"
+                  >
+                    <option value="">Seleccionar</option>
+                    <option value="Abancay">Abancay</option>
+                    <option value="Acobamba">Acobamba</option>
+                    <option value="Acomayo">Acomayo</option>
+                    <option value="Aija">Aija</option>
+                    <option value="Alto Amazonas">Alto Amazonas</option>
+                    <option value="Ambo">Ambo</option>
+                    <option value="Andahuaylas">Andahuaylas</option>
+                    <option value="Angaraes">Angaraes</option>
+                    <option value="Anta">Anta</option>
+                    <option value="Antabamba">Antabamba</option>
+                    <option value="Antonio Raymondi">Antonio Raymondi</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Ascope">Ascope</option>
+                    <option value="Asuncion">Asuncion</option>
+                    <option value="Atalaya">Atalaya</option>
+                    <option value="Ayabaca">Ayabaca</option>
+                    <option value="Aymaraes">Aymaraes</option>
+                    <option value="Azangaro">Azangaro</option>
+                    <option value="Bagua">Bagua</option>
+                    <option value="Barranca">Barranca</option>
+                    <option value="Bellavista">Bellavista</option>
+                    <option value="Bolivar">Bolivar</option>
+                    <option value="Bolognesi">Bolognesi</option>
+                    <option value="Bongara">Bongara</option>
+                    <option value="Cajabamba">Cajabamba</option>
+                    <option value="Cajamarca">Cajamarca</option>
+                    <option value="Cajatambo">Cajatambo</option>
+                    <option value="Calca">Calca</option>
+                    <option value="Callao">Callao</option>
+                    <option value="Camana">Camana</option>
+                    <option value="Canas">Canas</option>
+                    <option value="Canchis">Canchis</option>
+                    <option value="Candarave">Candarave</option>
+                    <option value="Canete">Canete</option>
+                    <option value="Cangallo">Cangallo</option>
+                    <option value="Canta">Canta</option>
+                    <option value="Carabaya">Carabaya</option>
+                    <option value="Caraveli">Caraveli</option>
+                    <option value="Carhuaz">Carhuaz</option>
+                    <option value="Carlos Fitzcarrald">
+                      Carlos Fitzcarrald
+                    </option>
+                    <option value="Casma">Casma</option>
+                    <option value="Castilla">Castilla</option>
+                    <option value="Castrovirreyna">Castrovirreyna</option>
+                    <option value="Caylloma">Caylloma</option>
+                    <option value="Celendin">Celendin</option>
+                    <option value="Chachapoyas">Chachapoyas</option>
+                    <option value="Chanchamayo">Chanchamayo</option>
+                    <option value="Chepen">Chepen</option>
+                    <option value="Chiclayo">Chiclayo</option>
+                    <option value="Chincha">Chincha</option>
+                    <option value="Chincheros">Chincheros</option>
+                    <option value="Chota">Chota</option>
+                    <option value="Chucuito">Chucuito</option>
+                    <option value="Chumbivilcas">Chumbivilcas</option>
+                    <option value="Chupaca">Chupaca</option>
+                    <option value="Churcampa">Churcampa</option>
+                    <option value="Concepcion">Concepcion</option>
+                    <option value="Condesuyos">Condesuyos</option>
+                    <option value="Condorcanqui">Condorcanqui</option>
+                    <option value="Contralmirante Villar">
+                      Contralmirante Villar
+                    </option>
+                    <option value="Contumaza">Contumaza</option>
+                    <option value="Coronel Portillo">Coronel Portillo</option>
+                    <option value="Corongo">Corongo</option>
+                    <option value="Cusco">Cusco</option>
+                    <option value="Cutervo">Cutervo</option>
+                    <option value="Daniel Alcides Carrion">
+                      Daniel Alcides Carrion
+                    </option>
+                    <option value="Dos de Mayo">Dos de Mayo</option>
+                    <option value="El Collao">El Collao</option>
+                    <option value="El Dorado">El Dorado</option>
+                    <option value="Espinar">Espinar</option>
+                    <option value="Ferrenafe">Ferrenafe</option>
+                    <option value="General Sanchez Cerro">
+                      General Sanchez Cerro
+                    </option>
+                    <option value="Gran Chimu">Gran Chimu</option>
+                    <option value="Grau">Grau</option>
+                    <option value="Huacaybamba">Huacaybamba</option>
+                    <option value="Hualgayoc">Hualgayoc</option>
+                    <option value="Huallaga">Huallaga</option>
+                    <option value="Huamalies">Huamalies</option>
+                    <option value="Huamanga">Huamanga</option>
+                    <option value="Huanca Sancos">Huanca Sancos</option>
+                    <option value="Huancabamba">Huancabamba</option>
+                    <option value="Huancane">Huancane</option>
+                    <option value="Huancavelica">Huancavelica</option>
+                    <option value="Huancayo">Huancayo</option>
+                    <option value="Huanta">Huanta</option>
+                    <option value="Huanuco">Huanuco</option>
+                    <option value="Huaral">Huaral</option>
+                    <option value="Huaraz">Huaraz</option>
+                    <option value="Huari">Huari</option>
+                    <option value="Huarmey">Huarmey</option>
+                    <option value="Huarochiri">Huarochiri</option>
+                    <option value="Huaylas">Huaylas</option>
+                    <option value="Huaytara">Huaytara</option>
+                    <option value="Ica">Ica</option>
+                    <option value="Ilo">Ilo</option>
+                    <option value="Islay">Islay</option>
+                    <option value="Jaen">Jaen</option>
+                    <option value="Jauja">Jauja</option>
+                    <option value="Jorge Basadre">Jorge Basadre</option>
+                    <option value="Julcan">Julcan</option>
+                    <option value="Junin">Junin</option>
+                    <option value="La Convencion">La Convencion</option>
+                    <option value="La Mar">La Mar</option>
+                    <option value="La Union">La Union</option>
+                    <option value="Lamas">Lamas</option>
+                    <option value="Lambayeque">Lambayeque</option>
+                    <option value="Lampa">Lampa</option>
+                    <option value="Lauricocha">Lauricocha</option>
+                    <option value="Leoncio Prado">Leoncio Prado</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Loreto">Loreto</option>
+                    <option value="Lucanas">Lucanas</option>
+                    <option value="Luya">Luya</option>
+                    <option value="Manu">Manu</option>
+                    <option value="Maranon">Maranon</option>
+                    <option value="Mariscal Caceres">Mariscal Caceres</option>
+                    <option value="Mariscal Luzuriaga">
+                      Mariscal Luzuriaga
+                    </option>
+                    <option value="Mariscal Nieto">Mariscal Nieto</option>
+                    <option value="Mariscal Ramon Castilla">
+                      Mariscal Ramon Castilla
+                    </option>
+                    <option value="Maynas">Maynas</option>
+                    <option value="Melgar">Melgar</option>
+                    <option value="Moho">Moho</option>
+                    <option value="Morropon">Morropon</option>
+                    <option value="Moyobamba">Moyobamba</option>
+                    <option value="Nazca">Nazca</option>
+                    <option value="Ocros">Ocros</option>
+                    <option value="Otuzco">Otuzco</option>
+                    <option value="Oxapampa">Oxapampa</option>
+                    <option value="Oyon">Oyon</option>
+                    <option value="Pacasmayo">Pacasmayo</option>
+                    <option value="Pachitea">Pachitea</option>
+                    <option value="Padre Abad">Padre Abad</option>
+                    <option value="Paita">Paita</option>
+                    <option value="Pallasca">Pallasca</option>
+                    <option value="Palpa">Palpa</option>
+                    <option value="Parinacochas">Parinacochas</option>
+                    <option value="Paruro">Paruro</option>
+                    <option value="Pasco">Pasco</option>
+                    <option value="Pataz">Pataz</option>
+                    <option value="Paucar Del Sara">Paucar Del Sara</option>
+                    <option value="Paucartambo">Paucartambo</option>
+                    <option value="Picota">Picota</option>
+                    <option value="Pisco">Pisco</option>
+                    <option value="Piura">Piura</option>
+                    <option value="Pomabamba">Pomabamba</option>
+                    <option value="Puerto Inca">Puerto Inca</option>
+                    <option value="Puno">Puno</option>
+                    <option value="Purus">Purus</option>
+                    <option value="Quispicanchi">Quispicanchi</option>
+                    <option value="Recuay">Recuay</option>
+                    <option value="Requena">Requena</option>
+                    <option value="Rioja">Rioja</option>
+                    <option value="Rodriguez De Mendoza">
+                      Rodriguez De Mendoza
+                    </option>
+                    <option value="San Antonio de Putina">
+                      San Antonio de Putina
+                    </option>
+                    <option value="San Ignacio">San Ignacio</option>
+                    <option value="San Marcos">San Marcos</option>
+                    <option value="San Martin">San Martin</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="San Pablo">San Pablo</option>
+                    <option value="San Roman">San Roman</option>
+                    <option value="Sanchez Carrion">Sanchez Carrion</option>
+                    <option value="Sandia">Sandia</option>
+                    <option value="Santa">Santa</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santiago De Chuco">Santiago De Chuco</option>
+                    <option value="Satipo">Satipo</option>
+                    <option value="Sechura">Sechura</option>
+                    <option value="Sihuas">Sihuas</option>
+                    <option value="Sucre">Sucre</option>
+                    <option value="Sullana">Sullana</option>
+                    <option value="Tacna">Tacna</option>
+                    <option value="Tahuamanu">Tahuamanu</option>
+                    <option value="Talara">Talara</option>
+                    <option value="Tambopata">Tambopata</option>
+                    <option value="Tarata">Tarata</option>
+                    <option value="Tarma">Tarma</option>
+                    <option value="Tayacaja">Tayacaja</option>
+                    <option value="Tocache">Tocache</option>
+                    <option value="Trujillo">Trujillo</option>
+                    <option value="Tumbes">Tumbes</option>
+                    <option value="Ucayali">Ucayali</option>
+                    <option value="Urubamba">Urubamba</option>
+                    <option value="Utcubamba">Utcubamba</option>
+                    <option value="Victor Fajardo">Victor Fajardo</option>
+                    <option value="Vilcas Huaman">Vilcas Huaman</option>
+                    <option value="Viru">Viru</option>
+                    <option value="Yarowilca">Yarowilca</option>
+                    <option value="Yauli">Yauli</option>
+                    <option value="Yauyos">Yauyos</option>
+                    <option value="Yungay">Yungay</option>
+                    <option value="Yunguyo">Yunguyo</option>
+                    <option value="Zarumilla">Zarumilla</option>
+                  </select>
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Localidad:</label>
+
+                  <div id="Div_Subactividades" bis_skin_checked="1">
+                    <select
+                      name="select2"
+                      id="localidad_inmueble"
+                      class="form-control"
+                    ></select>
+                  </div>
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Nombre:</label>
+                  <input
+                    name="nombre"
+                    type="text"
+                    id="nombre3"
+                    size="30"
+                    maxlength="50"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Apellido:</label>
+                  <input
+                    name="apellido"
+                    type="text"
+                    id="apellido3"
+                    size="30"
+                    maxlength="50"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Contraseña:</label>
+                  <input
+                    name="password"
+                    type="password"
+                    id="password"
+                    size="10"
+                    maxlength="10"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group" bis_skin_checked="1">
+                  <label>Repetir Contraseña:</label>
+                  <input
+                    type="password"
+                    name="password2"
+                    maxlength="10"
+                    size="10"
+                    class="form-control"
+                  />
+                </div>
+
+                <div bis_skin_checked="1">
+                  <div
+                    class="check"
+                    style="width: 100%; margin-bottom: 10px; text-align: center"
+                    bis_skin_checked="1"
+                  >
+                    <input
+                      id="aceptarterminos"
+                      type="checkbox"
+                      name="aceptarterminos"
+                      value="si"
+                      required=""
+                    />
+                    Acepto los
+                    <a
+                      href="http://www.bienesonline.com/terminosycond.php"
+                      target="_blank"
+                      >términos y condiciones</a
+                    >
+                    y las
+                    <a
+                      href="http://www.bienesonline.com/politicasdeprivacidad.php"
+                      target="_blank"
+                      >políticas de privacidad</a
+                    >
+                    del sitio.
+                  </div>
+                </div>
+
+                <div class="actions" style="height: 100px" bis_skin_checked="1">
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6Lcp8Q8UAAAAAIjn-H5066DjJd0ICogKjqcbaBzQ"
+                    bis_skin_checked="1"
+                  >
+                    <div
+                      style="width: 304px; height: 78px"
+                      bis_skin_checked="1"
+                    >
+                      <div bis_skin_checked="1">
+                        <iframe
+                          title="reCAPTCHA"
+                          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcp8Q8UAAAAAIjn-H5066DjJd0ICogKjqcbaBzQ&amp;co=aHR0cHM6Ly93d3cuYmllbmVzb25saW5lLnBlOjQ0Mw..&amp;hl=es-419&amp;v=iZWPJyR27lB0cR4hL_xOX0GC&amp;size=normal&amp;cb=v4yw10x6jw0y"
+                          width="304"
+                          height="78"
+                          role="presentation"
+                          name="a-f8h5rbvbicv7"
+                          frameborder="0"
+                          scrolling="no"
+                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                          bis_size='{"x":492,"y":1041,"w":304,"h":78,"abs_x":492,"abs_y":1041}'
+                        ></iframe>
+                      </div>
+                      <textarea
+                        id="g-recaptcha-response"
+                        name="g-recaptcha-response"
+                        class="g-recaptcha-response"
+                        style="
+                          width: 250px;
+                          height: 40px;
+                          border: 1px solid rgb(193, 193, 193);
+                          margin: 10px 25px;
+                          padding: 0px;
+                          resize: none;
+                          display: none;
+                        "
+                      ></textarea>
+                    </div>
+                    <iframe style="display: none"></iframe>
+                  </div>
+                </div>
+
+                <div class="actions" bis_skin_checked="1">
+                  <input
+                    name="redireccionar"
+                    type="hidden"
+                    id="redireccionar"
+                    value="publicarpropiedad.php?tipo_publicacion=1"
+                  />
+                  <input
+                    name="paginalogin"
+                    type="hidden"
+                    id="paginalogin"
+                    value="publicar.php"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-red"
+                    name="button"
+                    onclick="Validar(this.form)"
+                  >
+                    Registrarme
+                  </button>
+                </div>
+              </form>
+            </section>
+            <!--/.panel-block-->
+          </div>
+          <!--/.panel-right-->
+
+          <div class="clear" bis_skin_checked="1"></div>
+        </article>
+        <!--/.detalle-->
+
+        <div class="clear" bis_skin_checked="1"></div>
+      </div>
+      <!--/.detalle-->
+    </div>
+  </body>
+</html>
